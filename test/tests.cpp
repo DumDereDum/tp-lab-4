@@ -48,7 +48,7 @@ TEST(Test_states, test_choice) {
    obj.on()
    obj.coin(10)
    obj.coin(50)
-   obj.choise(1)
+   obj.choice(1)
    EXPECT_EQ(obj.printState(), "CHECK")
 }
 
@@ -57,7 +57,7 @@ TEST(Test_states, test_cansel_2) {
    obj.on()
    obj.coin(10)
    obj.coin(5)
-   obj.choise(1)
+   obj.choice(1)
    obj.cansel()
    EXPECT_EQ(obj.printState(), "WAIT")
 }
@@ -67,7 +67,7 @@ TEST(Test_states, test_check_1) {
    obj.on()
    obj.coin(10)
    obj.coin(50)
-   obj.choise(1)
+   obj.choice(1)
    EXPECT_EQ(obj.check(), true)
 }
 
@@ -76,7 +76,7 @@ TEST(Test_states, test_check_2) {
    obj.on()
    obj.coin(1)
    obj.coin(5)
-   obj.choise(1)
+   obj.choice(1)
    EXPECT_EQ(obj.check(), false)
 }
 
@@ -85,7 +85,7 @@ TEST(Test_states, test_cook) {
    obj.on()
    obj.coin(10)
    obj.coin(50)
-   obj.choise(1)
+   obj.choice(1)
    obj.cook()
    EXPECT_EQ(obj.printState(), "COOK")
 }
@@ -95,7 +95,7 @@ TEST(Test_states, test_finish) {
    obj.on()
    obj.coin(10)
    obj.coin(50)
-   obj.choise(1)
+   obj.choice(1)
    obj.cook()
    obj.finish()
    EXPECT_EQ(obj.printState(), "WAIT")
